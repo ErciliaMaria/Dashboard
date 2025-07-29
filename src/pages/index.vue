@@ -5,6 +5,7 @@
         <v-list-subheader>Menu</v-list-subheader>
         <v-list-item prepend-icon="mdi-home">Home</v-list-item>
         <v-list-item prepend-icon="mdi-account">Usuário</v-list-item>
+        <v-list-item to="/table" prepend-icon="mdi-table" link>Tabelas</v-list-item>
 
 
         <v-list-group value="Clientes">
