@@ -33,18 +33,18 @@
             <v-card class="pa-3">
               <v-list>
                 <vi-list-item>
-                <v-list-item-title>Meus favoritos</v-list-item-title>
-                <v-list-item-subtitle> Todas as compras realizadas nos ultimos meses.</v-list-item-subtitle>
-                  </vi-list-item>
+                  <v-list-item-title>Meus favoritos</v-list-item-title>
+                  <v-list-item-subtitle> Todas as compras realizadas nos ultimos meses.</v-list-item-subtitle>
+                </vi-list-item>
               </v-list>
-           
-               <v-divider></v-divider>
+
+              <v-divider></v-divider>
 
               <v-list>
                 <vi-list-item>
-                <v-list-item-title>Meus favoritos</v-list-item-title>
-                <v-list-item-subtitle> Todas as compras que foram entregues.</v-list-item-subtitle>
-                  </vi-list-item>
+                  <v-list-item-title>Meus favoritos</v-list-item-title>
+                  <v-list-item-subtitle> Todas as compras que foram entregues.</v-list-item-subtitle>
+                </vi-list-item>
               </v-list>
             </v-card>
           </v-menu>
@@ -75,7 +75,47 @@
     </v-app-bar>
     <v-main>
       <v-container>
-        <h1>DashBoard</h1>
+        <div class="d-flex justify-space-between">
+          <h1>DashBoard</h1>
+          <v-card-tilte>
+            <v-btn
+             color="surface-variant" 
+             text="Adicionar Usuário" 
+             variant="flat" 
+             @click="isDialogOpen = true"></v-btn>
+            <v-dialog 
+            v-model="isDialogOpen" 
+            width="auto">
+              <v-card 
+              min-width="900px"
+              >
+              <v-card-title>Adicionar usuário</v-card-title>
+                <v-card-text>
+                  <v-row>
+                    <v-col>
+                      <v-text-field label="Nome" variant="outlined"></v-text-field>
+                    </v-col>
+                    <v-col>
+                      <v-text-field label="Email"></v-text-field>
+                    </v-col>
+                  </v-row>
+
+                  <v-select label="Cargo"
+                    :items="['Admin', 'Gerente', 'Visitante']"></v-select>
+                </v-card-text>
+
+                  <v-card-actions class="d-flex align-center justify-center">
+                    <v-btn 
+                    variant="tonal" 
+                    color="error"
+                    @click="dialogClose"
+                     >Cancelar</v-btn>
+                    <v-btn variant="tonal" color="success">Salvar</v-btn>
+                  </v-card-actions>
+              </v-card>
+            </v-dialog>
+          </v-card-tilte>
+        </div>
         <v-row class="d-flex flex-column flex-sm-row">
           <v-col cols="12" xs="12" sm="6" md="4" lg="3">
             <v-card>
@@ -162,4 +202,9 @@
 import { ref } from 'vue';
 
 const isDrawerOpen = ref(false)
+const isDialogOpen = ref(false)
+
+function dialogClose() {
+  isDialogOpen.value = false
+}
 </script>
