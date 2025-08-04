@@ -13,7 +13,7 @@
             <v-list-item v-bind="props" prepend-icon="mdi-account-circle">Clientes</v-list-item>
           </template>
 
-          <v-list-item prepend-icon="mdi-currency-usd">Faturamento</v-list-item>
+          <v-list-item to="/faturamento" prepend-icon="mdi-currency-usd">Faturamento</v-list-item>
           <v-list-item prepend-icon="mdi-chart-line">Relatório</v-list-item>
         </v-list-group>
       </v-list>
