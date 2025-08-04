@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+    <v-container>
     <v-card class="pa-4" outlined>
       <v-card-title>
         Vendas Mensais
@@ -15,7 +15,6 @@
 import { onMounted, ref } from 'vue'
 import Chart from 'chart.js/auto'
 
-// Exemplo de dados (mock)
 const vendas = [
   { mes: 'Jan', valor: 1200 },
   { mes: 'Fev', valor: 980 },
@@ -25,17 +24,14 @@ const vendas = [
   { mes: 'Jun', valor: 1900 },
 ]
 
-// Referência para o canvas
 const chartCanvas = ref(null)
 
 onMounted(() => {
   const ctx = chartCanvas.value.getContext('2d')
 
-  // map para extrair os dados
   const labels = vendas.map(v => v.mes)
   const data = vendas.map(v => v.valor)
 
-  // forEach para exibir no console
   vendas.forEach(v => console.log(`${v.mes}: R$ ${v.valor}`))
 
   new Chart(ctx, {
