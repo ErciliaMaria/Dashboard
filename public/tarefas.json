@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "titulo": "Estudar Vue.js",
+    "concluida": false,
+    "categoria": "Estudo"
+  },
+  {
+    "id": 2,
+    "titulo": "Fazer exercícios físicos",
+    "concluida": true,
+    "categoria": "Saúde"
+  },
+  {
+    "id": 3,
+    "titulo": "Comprar mantimentos",
+    "concluida": false,
+    "categoria": "Pessoal"
+  },
+    {
+    "id": 4,
+    "titulo": "Estudar Laravel",
+    "concluida": true,
+    "categoria": "Estudo"
+  },
+    {
+    "id": 5,
+    "titulo": "Estudar Laravel",
+    "concluida": true,
+    "categoria": "Estudo"
+  },
+    {
+    "id": 6,
+    "titulo": "Comprar fruta",
+    "concluida": false,
+    "categoria": "Pessoal"
+  },
+    {
+    "id": 7,
+    "titulo": "Fazer caminhada",
+    "concluida": false,
+    "categoria": "Saúde"
+  },
+    {
+    "id": 8,
+    "titulo": "Lavar o carro",
+    "concluida": false,
+    "categoria": "Pessoal"
+  },
+    {
+    "id": 9,
+    "titulo": "Comprar presente dia dos pais",
+    "concluida": false,
+    "categoria": "Pessoal"
+  },
+    {
+    "id": 10,
+    "titulo": "Estudar ES6",
+    "concluida": true,
+    "categoria": "Estudo"
+  }
+]

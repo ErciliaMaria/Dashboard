@@ -16,6 +16,13 @@
           <v-list-item to="/faturamento" prepend-icon="mdi-currency-usd">Faturamento</v-list-item>
           <v-list-item prepend-icon="mdi-chart-line">Relatório</v-list-item>
         </v-list-group>
+
+        <v-list-group value="Lista">
+          <template #activator="{props}">
+            <v-list-item v-bind="props" prepend-icon="mdi-view-list">Lista</v-list-item>
+          </template>
+          <v-list-item to="/lista" prepend-icon="mdi-list-status">Lista de Tarefas</v-list-item>
+        </v-list-group>
       </v-list>
     </v-navigation-drawer>
 
@@ -96,7 +103,10 @@
                       <v-text-field label="Nome" variant="outlined"></v-text-field>
                     </v-col>
                     <v-col>
-                      <v-text-field label="Email"></v-text-field>
+                      <v-text-field 
+                      label="Email" 
+                      :rules="emailRules"
+                      variant="outlined"></v-text-field>
                     </v-col>
                   </v-row>
 
@@ -203,6 +213,20 @@ import { ref } from 'vue';
 
 const isDrawerOpen = ref(false)
 const isDialogOpen = ref(false)
+const emailRules = [
+  value => {
+    if(value) return true
+    return 'You must enter a email'
+  },
+  value => {
+    if(value.includes('@')) return true
+    return 'Your email is invalid'
+  },
+  value => {
+    if(value.includes('.com')) return true
+    return 'Your email invalid'
+  }
+]
 
 function dialogClose() {
   isDialogOpen.value = false
